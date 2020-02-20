@@ -1,0 +1,39 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+## Clustering Time Series Data
+
+- article by [datawookie](https://datawookie.netlify.com/blog/2017/04/clustering-time-series-data/)
+
+Here we are going to use the package `TSclust`
+
+### Grabbing Some Data
+
+Since stock ticker data are not too dissimilar to the data that I am currently working with, they seemed like a reasonable target for my experiments.
+
+```{r}
+library(quantmod)
+symbols <- c('A', 'AAPL', 'ADBE', 'AMD', 'AMZN', 'BA', 'CL', 'CSCO', 'EXPE', 'FB',
+  'GOOGL', 'GRMN', 'IBM', 'INTC', 'LMT', 'MSFT', 'NFLX', 'ORCL', 'RHT', 'YHOO')
+
+print (symbols)
+```
+```{r}
+start = as.Date("2014-01-01")
+until = as.Date("2014-12-31")
+```
+
+```{r}
+stocks = lapply(symbols, function(symbol) {
+adjusted = getSymbols(symbol, from = start, to = until, auto.assign = FALSE)[, 6]
+names(adjusted) = symbol
+adjusted
+})
+```
+
