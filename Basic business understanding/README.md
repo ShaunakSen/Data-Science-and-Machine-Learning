@@ -5,6 +5,12 @@
 1. Prove profitability before raising funds - this shows investors that we have a strong foundation and that our business model is working
 2. Customer centric approach
 3. Dominate a space and use that learning and customer base to expand to others; Flipkart became the best book retailer first before moving onto other things
+4. Only 8% startups in India raise funds. But off the 92% there is a small % of startups who are **bootstrapped (rely on own savings and revenues in order to operate and expand) -** credits**:** [https://www.youtube.com/watch?v=AdY_pttRywQ](https://www.youtube.com/watch?v=AdY_pttRywQ)
+    1. Quite difficult to do - start off with savings/or get a paying customer soon
+    2. Product/service should sell itself
+    3. If u can pull this off it means u own our company 100% - no stakeholders, voting rights etc.
+    4. myoperator, wingify, great learning, QuickHeal (bootsrapped until 1995-2010), Kayako, FusionCharts, kaleyra, Zerodha (an unicorn startup which is bootsrapped - 30 people tech team!), Directi, zoho (saas unicorn)
+    5. A lot of these are SAAS based 
 
 ## Business model:
 
