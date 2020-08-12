@@ -118,3 +118,14 @@ All the above 8 add up to Costs. What are the costs and expenses are reqd to ope
 - What are the most important costs we need
 - What are the most expensive resources
 - What key activities are the most expensive
+
+## Angel Investor vs Venture Capitalists
+
+Based on: https://www.youtube.com/watch?v=BhLGL6iU94M
+
+1. AI uses their own money to invest while VC uses other peoples' money
+2. AI: usually entrepreneurs/ex entrepreneurs who invest their own money. VCs are usually an entity who raise money from various sources like large corporations, firms and they pool in that money to invest in startups
+3. AI comes in at a very early stage (high risk). VC usually come in the growth/expansion stage (lower risk)
+4. AI takes larger stake as they come earlier (ROI is higher)
+5. AI do not stay involved for long period. After first investment, they sell off the stake usually. VCs usually stay longer, help the company grow by raising future investments and usually wait for IPO/acquisition to sell their stake and get ROI
+6. AI because they invest a smaller amount do not interfere in the workings of the company. VCs are heavily involved. AI: non board members. VC: board members
