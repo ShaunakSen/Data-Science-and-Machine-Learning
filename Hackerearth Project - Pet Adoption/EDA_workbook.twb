@@ -1,0 +1,1540 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20193.19.0821.2225                               -->
+<workbook original-version='18.1' source-build='2019.3.0 (20193.19.0821.2225)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='train' inline='true' name='federated.09glfav0znd6lm1676j6k13s3sow' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='train' name='textscan.00dewnp0uyyne4144cn7g11gffsg'>
+            <connection class='textclean' cleaning='yes' compat='no' csvFile='C:/Users/shaun/Documents/my_projects/Data-Science-and-Machine-Learning/Hackerearth Project - Pet Adoption/Dataset/train.csv' dataRefreshTime='' directory='C:/Users/shaun/Documents/my_projects/Data-Science-and-Machine-Learning/Hackerearth Project - Pet Adoption/Dataset' filename='C:/Users/shaun/AppData/Local/Temp/TableauTemp/1xkelsm1rr1cwb12scd9t0snux2z/train.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.00dewnp0uyyne4144cn7g11gffsg' name='train.csv' table='[train#csv$]' type='table'>
+          <columns character-set='UTF-8' gridOrigin='A1:K10001:no:A1:K10001:1' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='pet_id' ordinal='0' />
+            <column datatype='date' name='issue_date' ordinal='1' />
+            <column datatype='datetime' name='listing_date' ordinal='2' />
+            <column datatype='integer' name='condition' ordinal='3' />
+            <column datatype='string' name='color_type' ordinal='4' />
+            <column datatype='real' name='length(m)' ordinal='5' />
+            <column datatype='real' name='height(cm)' ordinal='6' />
+            <column datatype='integer' name='X1' ordinal='7' />
+            <column datatype='integer' name='X2' ordinal='8' />
+            <column datatype='integer' name='breed_category' ordinal='9' />
+            <column datatype='integer' name='pet_category' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>pet_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[pet_id]</local-name>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias>pet_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>issue_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[issue_date]</local-name>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias>issue_date</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>listing_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[listing_date]</local-name>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias>listing_date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>condition</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[condition]</local-name>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias>condition</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>color_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[color_type]</local-name>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias>color_type</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>length(m)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[length(m)]</local-name>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias>length(m)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>height(cm)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[height(cm)]</local-name>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias>height(cm)</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[X1]</local-name>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias>X1</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>X2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[X2]</local-name>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias>X2</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>breed_category</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[breed_category]</local-name>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias>breed_category</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pet_category</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[pet_category]</local-name>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias>pet_category</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:K10001:no:A1:K10001:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>89223</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.450839' measure-ordering='alphabetic' measure-percentage='0.549161' show-structure='true' user-set-layout='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='X2 wrt breed'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='14'>How does X2 affect breed category</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='train' name='federated.09glfav0znd6lm1676j6k13s3sow' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09glfav0znd6lm1676j6k13s3sow'>
+            <column datatype='integer' name='[X1]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[X2]' role='measure' type='quantitative' />
+            <column-instance column='[X1]' derivation='Avg' name='[avg:X1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[X2]' derivation='Avg' name='[avg:X2:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[breed_category]' role='measure' type='quantitative' />
+            <column-instance column='[breed_category]' derivation='Count' name='[cnt:breed_category:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[breed_category]' derivation='None' name='[none:breed_category:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</rows>
+        <cols>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                  <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1477</value>
+                <value>2</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                  <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>8357</value>
+                <value>1</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                  <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>9000</value>
+                <value>0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. X1: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>13.144211238997968</value>
+                    <value>1477</value>
+                    <value>2</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. X1: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>4.8672968768696903</value>
+                    <value>8357</value>
+                    <value>1</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. X1: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>4.5601111111111114</value>
+                    <value>9000</value>
+                    <value>0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. X2: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>5.8612051455653349</value>
+                    <value>1477</value>
+                    <value>2</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. X2: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>4.3857843723824335</value>
+                    <value>8357</value>
+                    <value>1</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. X2: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>4.5444444444444443</value>
+                    <value>9000</value>
+                    <value>0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{DDA8A432-5765-4CCD-AEB0-45A6DEDD2C41}' />
+    </worksheet>
+    <worksheet name='condition wrt breed'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='14'>How does height affect breed category</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='train' name='federated.09glfav0znd6lm1676j6k13s3sow' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09glfav0znd6lm1676j6k13s3sow'>
+            <column datatype='integer' name='[breed_category]' role='measure' type='quantitative' />
+            <column-instance column='[breed_category]' derivation='Count' name='[cnt:breed_category:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[condition]' role='measure' type='quantitative' />
+            <column-instance column='[breed_category]' derivation='None' name='[none:breed_category:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[condition]' derivation='None' name='[none:condition:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Text' />
+            <encodings>
+              <text column='[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.09glfav0znd6lm1676j6k13s3sow].[none:condition:ok]</rows>
+        <cols>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</cols>
+      </table>
+      <simple-id uuid='{EFA19C76-622F-4EB5-81B0-0A5A655F3C4E}' />
+    </worksheet>
+    <worksheet name='ht wrt breed'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='14'>How does height affect breed category</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='train' name='federated.09glfav0znd6lm1676j6k13s3sow' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09glfav0znd6lm1676j6k13s3sow'>
+            <column datatype='integer' name='[X1]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[X2]' role='measure' type='quantitative' />
+            <column-instance column='[X1]' derivation='Avg' name='[avg:X1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[X2]' derivation='Avg' name='[avg:X2:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[height(cm)]' derivation='Avg' name='[avg:height(cm):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[length(m)]' derivation='Avg' name='[avg:length(m):qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[breed_category]' role='measure' type='quantitative' />
+            <column-instance column='[breed_category]' derivation='Count' name='[cnt:breed_category:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[height(cm)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[length(m)]' role='measure' type='quantitative' />
+            <column-instance column='[breed_category]' derivation='None' name='[none:breed_category:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.09glfav0znd6lm1676j6k13s3sow].[avg:height(cm):qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</rows>
+        <cols>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                  <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1477</value>
+                <value>2</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                  <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>8357</value>
+                <value>1</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                  <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>9000</value>
+                <value>0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. X1: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>13.144211238997968</value>
+                    <value>1477</value>
+                    <value>2</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. X1: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>4.8672968768696903</value>
+                    <value>8357</value>
+                    <value>1</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. X1: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>4.5601111111111114</value>
+                    <value>9000</value>
+                    <value>0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. X2: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>5.8612051455653349</value>
+                    <value>1477</value>
+                    <value>2</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. X2: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>4.3857843723824335</value>
+                    <value>8357</value>
+                    <value>1</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. X2: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>4.5444444444444443</value>
+                    <value>9000</value>
+                    <value>0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='6' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. length(m): </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>0.50662830060934283</value>
+                    <value>1477</value>
+                    <value>2</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='7' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. length(m): </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>0.5041869091779323</value>
+                    <value>8357</value>
+                    <value>1</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='8' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. length(m): </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>0.50053999999999932</value>
+                    <value>9000</value>
+                    <value>0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='9' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. height(cm): </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:height(cm):qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:height(cm):qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>27.605423155044051</value>
+                    <value>1477</value>
+                    <value>2</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='10' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. height(cm): </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:height(cm):qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:height(cm):qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>27.608730405648014</value>
+                    <value>8357</value>
+                    <value>1</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='11' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Avg. height(cm): </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:height(cm):qk]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:height(cm):qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>27.274659999999898</value>
+                    <value>9000</value>
+                    <value>0</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{4A8704C5-C6C6-4D63-84D6-0FD2D0BAD3A2}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='X2 wrt breed'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X2:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[sum:X2:qk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[sum:height(cm):qk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[sum:length(m):qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{16564B3B-6597-40D4-901F-E60CCB65B3ED}' />
+    </window>
+    <window class='worksheet' name='ht wrt breed'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.09glfav0znd6lm1676j6k13s3sow].[avg:height(cm):qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:height(cm):qk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[sum:X2:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{FCA3B0E7-2553-430E-B5D4-B58B4BFC46C4}' />
+    </window>
+    <window class='worksheet' maximized='true' name='condition wrt breed'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='37'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:height(cm):qk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[sum:X2:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5AC93D92-87A2-478A-8CEE-87BE7A1D3F0E}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='X2 wrt breed' width='192'>
+      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
+      t7vv/wHkz7fGMhho9AAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='124' name='condition wrt breed' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='ht wrt breed' width='192'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
