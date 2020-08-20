@@ -15,57 +15,72 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='train' name='textscan.00dewnp0uyyne4144cn7g11gffsg'>
-            <connection class='textclean' cleaning='yes' compat='no' csvFile='C:/Users/shaun/Documents/my_projects/Data-Science-and-Machine-Learning/Hackerearth Project - Pet Adoption/Dataset/train.csv' dataRefreshTime='' directory='C:/Users/shaun/Documents/my_projects/Data-Science-and-Machine-Learning/Hackerearth Project - Pet Adoption/Dataset' filename='C:/Users/shaun/AppData/Local/Temp/TableauTemp/1xkelsm1rr1cwb12scd9t0snux2z/train.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
+            <connection class='textscan' cleaning='yes' compat='no' csvFile='C:/Users/shaun/Documents/my_projects/Data-Science-and-Machine-Learning/Hackerearth Project - Pet Adoption/Dataset/train.csv' dataRefreshTime='' directory='C:/Users/shaun/Documents/my_projects/Data-Science-and-Machine-Learning/Hackerearth Project - Pet Adoption/Dataset' filename='C:/Users/shaun/AppData/Local/Temp/TableauTemp/16ifjg61ojqk9c15mhn5n0gldwn6/train.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
           </named-connection>
         </named-connections>
-        <relation connection='textscan.00dewnp0uyyne4144cn7g11gffsg' name='train.csv' table='[train#csv$]' type='table'>
-          <columns character-set='UTF-8' gridOrigin='A1:K10001:no:A1:K10001:1' header='yes' locale='en_GB' separator=','>
+        <relation connection='textscan.00dewnp0uyyne4144cn7g11gffsg' name='train.csv' table='[train#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
             <column datatype='string' name='pet_id' ordinal='0' />
-            <column datatype='date' name='issue_date' ordinal='1' />
+            <column datatype='datetime' name='issue_date' ordinal='1' />
             <column datatype='datetime' name='listing_date' ordinal='2' />
-            <column datatype='integer' name='condition' ordinal='3' />
+            <column datatype='real' name='condition' ordinal='3' />
             <column datatype='string' name='color_type' ordinal='4' />
             <column datatype='real' name='length(m)' ordinal='5' />
             <column datatype='real' name='height(cm)' ordinal='6' />
             <column datatype='integer' name='X1' ordinal='7' />
             <column datatype='integer' name='X2' ordinal='8' />
-            <column datatype='integer' name='breed_category' ordinal='9' />
+            <column datatype='real' name='breed_category' ordinal='9' />
             <column datatype='integer' name='pet_category' ordinal='10' />
           </columns>
         </relation>
         <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[train.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
           <metadata-record class='column'>
             <remote-name>pet_id</remote-name>
-            <remote-type>130</remote-type>
+            <remote-type>129</remote-type>
             <local-name>[pet_id]</local-name>
             <parent-name>[train.csv]</parent-name>
             <remote-alias>pet_id</remote-alias>
             <ordinal>0</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
+            <collation flag='0' name='LEN_RGB' />
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>issue_date</remote-name>
-            <remote-type>7</remote-type>
+            <remote-type>135</remote-type>
             <local-name>[issue_date]</local-name>
             <parent-name>[train.csv]</parent-name>
             <remote-alias>issue_date</remote-alias>
             <ordinal>1</ordinal>
-            <local-type>date</local-type>
+            <local-type>datetime</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
-            </attributes>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>listing_date</remote-name>
-            <remote-type>7</remote-type>
+            <remote-type>135</remote-type>
             <local-name>[listing_date]</local-name>
             <parent-name>[train.csv]</parent-name>
             <remote-alias>listing_date</remote-alias>
@@ -73,38 +88,31 @@
             <local-type>datetime</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
-            </attributes>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>condition</remote-name>
-            <remote-type>20</remote-type>
+            <remote-type>5</remote-type>
             <local-name>[condition]</local-name>
             <parent-name>[train.csv]</parent-name>
             <remote-alias>condition</remote-alias>
             <ordinal>3</ordinal>
-            <local-type>integer</local-type>
+            <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>color_type</remote-name>
-            <remote-type>130</remote-type>
+            <remote-type>129</remote-type>
             <local-name>[color_type]</local-name>
             <parent-name>[train.csv]</parent-name>
             <remote-alias>color_type</remote-alias>
             <ordinal>4</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
             <contains-null>true</contains-null>
-            <collation flag='1' name='LEN_RGB_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
+            <collation flag='0' name='LEN_RGB' />
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>length(m)</remote-name>
@@ -115,11 +123,7 @@
             <ordinal>5</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
-            <precision>15</precision>
             <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>height(cm)</remote-name>
@@ -130,11 +134,7 @@
             <ordinal>6</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
-            <precision>15</precision>
             <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>X1</remote-name>
@@ -146,9 +146,6 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>X2</remote-name>
@@ -160,23 +157,17 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>breed_category</remote-name>
-            <remote-type>20</remote-type>
+            <remote-type>5</remote-type>
             <local-name>[breed_category]</local-name>
             <parent-name>[train.csv]</parent-name>
             <remote-alias>breed_category</remote-alias>
             <ordinal>9</ordinal>
-            <local-type>integer</local-type>
+            <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>pet_category</remote-name>
@@ -188,38 +179,94 @@
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[train.csv]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='context'>0</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:K10001:no:A1:K10001:1&quot;</attribute>
-              <attribute datatype='integer' name='lost'>0</attribute>
-              <attribute datatype='integer' name='outcome'>1</attribute>
-              <attribute datatype='integer' name='processed'>89223</attribute>
-            </attributes>
           </metadata-record>
         </metadata-records>
       </connection>
+      <aliases enabled='yes' />
+      <column caption='day_of_week' datatype='integer' name='[Calculation_1860268136510783488]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='ISOWEEKDAY([issue_date])' />
+      </column>
+      <column caption='is_weekday' datatype='boolean' name='[Calculation_264586494912614400]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[Calculation_1860268136510783488] &gt;=1 AND [Calculation_1860268136510783488] &lt;= 5' />
+      </column>
       <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
         <calculation class='tableau' formula='1' />
       </column>
-      <layout dim-ordering='alphabetic' dim-percentage='0.450839' measure-ordering='alphabetic' measure-percentage='0.549161' show-structure='true' user-set-layout='true' />
+      <column datatype='real' name='[breed_category]' role='measure' type='quantitative' />
+      <column-instance column='[breed_category]' derivation='None' name='[none:breed_category:ok]' pivot='key' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.448441' measure-ordering='alphabetic' measure-percentage='0.551559' show-structure='true' user-set-layout='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:breed_category:ok]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>0.0</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>2.0</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>1.0</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
       </semantic-values>
       <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='pet_id' />
+        <field-sort-custom-order field='issue_date' />
+        <field-sort-custom-order field='Calculation_1860268136510783488' />
+        <field-sort-custom-order field='Calculation_264586494912614400' />
+        <field-sort-custom-order field='listing_date' />
+        <field-sort-custom-order field='condition' />
+        <field-sort-custom-order field='color_type' />
+        <field-sort-custom-order field='length(m)' />
+        <field-sort-custom-order field='height(cm)' />
+        <field-sort-custom-order field='X1' />
+        <field-sort-custom-order field='X2' />
+        <field-sort-custom-order field='breed_category' />
+        <field-sort-custom-order field='pet_category' />
+      </field-sort-info>
     </datasource>
   </datasources>
   <worksheets>
+    <worksheet name='X1 wrt X2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='14'>X1 vs X2</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='train' name='federated.09glfav0znd6lm1676j6k13s3sow' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09glfav0znd6lm1676j6k13s3sow'>
+            <column datatype='integer' name='[X1]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[X2]' role='measure' type='quantitative' />
+            <column-instance column='[X1]' derivation='None' name='[none:X1:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[X2]' derivation='None' name='[none:X2:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+          </pane>
+        </panes>
+        <rows>[federated.09glfav0znd6lm1676j6k13s3sow].[none:X2:qk]</rows>
+        <cols>[federated.09glfav0znd6lm1676j6k13s3sow].[none:X1:qk]</cols>
+      </table>
+      <simple-id uuid='{80AC8ABF-DB66-486B-8971-F6D218F49203}' />
+    </worksheet>
     <worksheet name='X2 wrt breed'>
       <layout-options>
         <title>
@@ -234,11 +281,9 @@
             <datasource caption='train' name='federated.09glfav0znd6lm1676j6k13s3sow' />
           </datasources>
           <datasource-dependencies datasource='federated.09glfav0znd6lm1676j6k13s3sow'>
-            <column datatype='integer' name='[X1]' role='measure' type='quantitative' />
             <column datatype='integer' name='[X2]' role='measure' type='quantitative' />
-            <column-instance column='[X1]' derivation='Avg' name='[avg:X1:qk]' pivot='key' type='quantitative' />
             <column-instance column='[X2]' derivation='Avg' name='[avg:X2:qk]' pivot='key' type='quantitative' />
-            <column datatype='integer' name='[breed_category]' role='measure' type='quantitative' />
+            <column datatype='real' name='[breed_category]' role='measure' type='quantitative' />
             <column-instance column='[breed_category]' derivation='Count' name='[cnt:breed_category:qk]' pivot='key' type='quantitative' />
             <column-instance column='[breed_category]' derivation='None' name='[none:breed_category:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
@@ -277,7 +322,7 @@
               </tuple-descriptor>
               <tuple>
                 <value>1477</value>
-                <value>2</value>
+                <value>2.0</value>
               </tuple>
             </tuple-reference>
           </mark-label>
@@ -299,7 +344,7 @@
               </tuple-descriptor>
               <tuple>
                 <value>8357</value>
-                <value>1</value>
+                <value>1.0</value>
               </tuple>
             </tuple-reference>
           </mark-label>
@@ -321,129 +366,12 @@
               </tuple-descriptor>
               <tuple>
                 <value>9000</value>
-                <value>0</value>
+                <value>0.0</value>
               </tuple>
             </tuple-reference>
           </mark-label>
         </mark-labels>
         <annotations>
-          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
-            <formatted-text>
-              <run fontcolor='#787878'>breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Avg. X1: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Count of breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
-            </formatted-text>
-            <point>
-              <visual-coordinate class='mark'>
-                <tuple-reference>
-                  <tuple-descriptor>
-                    <pane-descriptor>
-                      <x-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                      </x-fields>
-                      <y-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      </y-fields>
-                    </pane-descriptor>
-                    <columns>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                    </columns>
-                  </tuple-descriptor>
-                  <tuple>
-                    <value>13.144211238997968</value>
-                    <value>1477</value>
-                    <value>2</value>
-                  </tuple>
-                </tuple-reference>
-              </visual-coordinate>
-            </point>
-            <body x='130' y='-20' />
-          </annotation>
-          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='180'>
-            <formatted-text>
-              <run fontcolor='#787878'>breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Avg. X1: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Count of breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
-            </formatted-text>
-            <point>
-              <visual-coordinate class='mark'>
-                <tuple-reference>
-                  <tuple-descriptor>
-                    <pane-descriptor>
-                      <x-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                      </x-fields>
-                      <y-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      </y-fields>
-                    </pane-descriptor>
-                    <columns>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                    </columns>
-                  </tuple-descriptor>
-                  <tuple>
-                    <value>4.8672968768696903</value>
-                    <value>8357</value>
-                    <value>1</value>
-                  </tuple>
-                </tuple-reference>
-              </visual-coordinate>
-            </point>
-            <body x='130' y='-20' />
-          </annotation>
-          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='180'>
-            <formatted-text>
-              <run fontcolor='#787878'>breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Avg. X1: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Count of breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
-            </formatted-text>
-            <point>
-              <visual-coordinate class='mark'>
-                <tuple-reference>
-                  <tuple-descriptor>
-                    <pane-descriptor>
-                      <x-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                      </x-fields>
-                      <y-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      </y-fields>
-                    </pane-descriptor>
-                    <columns>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                    </columns>
-                  </tuple-descriptor>
-                  <tuple>
-                    <value>4.5601111111111114</value>
-                    <value>9000</value>
-                    <value>0</value>
-                  </tuple>
-                </tuple-reference>
-              </visual-coordinate>
-            </point>
-            <body x='130' y='-20' />
-          </annotation>
           <annotation class='point' id='3' mark-position='1' pullback='12' text-width='180'>
             <formatted-text>
               <run fontcolor='#787878'>breed_category: </run>
@@ -476,7 +404,7 @@
                   <tuple>
                     <value>5.8612051455653349</value>
                     <value>1477</value>
-                    <value>2</value>
+                    <value>2.0</value>
                   </tuple>
                 </tuple-reference>
               </visual-coordinate>
@@ -515,7 +443,7 @@
                   <tuple>
                     <value>4.3857843723824335</value>
                     <value>8357</value>
-                    <value>1</value>
+                    <value>1.0</value>
                   </tuple>
                 </tuple-reference>
               </visual-coordinate>
@@ -554,7 +482,7 @@
                   <tuple>
                     <value>4.5444444444444443</value>
                     <value>9000</value>
-                    <value>0</value>
+                    <value>0.0</value>
                   </tuple>
                 </tuple-reference>
               </visual-coordinate>
@@ -565,11 +493,11 @@
       </table>
       <simple-id uuid='{DDA8A432-5765-4CCD-AEB0-45A6DEDD2C41}' />
     </worksheet>
-    <worksheet name='condition wrt breed'>
+    <worksheet name='breed_vs_pet'>
       <layout-options>
         <title>
           <formatted-text>
-            <run fontsize='14'>How does height affect breed category</run>
+            <run fontsize='14'>Relationship bw breed and pet categories</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -579,9 +507,48 @@
             <datasource caption='train' name='federated.09glfav0znd6lm1676j6k13s3sow' />
           </datasources>
           <datasource-dependencies datasource='federated.09glfav0znd6lm1676j6k13s3sow'>
-            <column datatype='integer' name='[breed_category]' role='measure' type='quantitative' />
+            <column datatype='real' name='[breed_category]' role='measure' type='quantitative' />
+            <column-instance column='[pet_category]' derivation='Count' name='[cnt:pet_category:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[breed_category]' derivation='None' name='[none:breed_category:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[pet_category]' derivation='None' name='[none:pet_category:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[pet_category]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:pet_category:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.09glfav0znd6lm1676j6k13s3sow].[none:pet_category:qk]</rows>
+        <cols>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</cols>
+      </table>
+      <simple-id uuid='{3EC9592E-7A74-4A82-A4F8-4E3AFAC2B54F}' />
+    </worksheet>
+    <worksheet name='condition wrt breed'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='14'>breed category vs condition tabular view</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='train' name='federated.09glfav0znd6lm1676j6k13s3sow' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09glfav0znd6lm1676j6k13s3sow'>
+            <column datatype='real' name='[breed_category]' role='measure' type='quantitative' />
             <column-instance column='[breed_category]' derivation='Count' name='[cnt:breed_category:qk]' pivot='key' type='quantitative' />
-            <column datatype='integer' name='[condition]' role='measure' type='quantitative' />
+            <column datatype='real' name='[condition]' role='measure' type='quantitative' />
             <column-instance column='[breed_category]' derivation='None' name='[none:breed_category:ok]' pivot='key' type='ordinal' />
             <column-instance column='[condition]' derivation='None' name='[none:condition:ok]' pivot='key' type='ordinal' />
           </datasource-dependencies>
@@ -610,6 +577,486 @@
       </table>
       <simple-id uuid='{EFA19C76-622F-4EB5-81B0-0A5A655F3C4E}' />
     </worksheet>
+    <worksheet name='date wise'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='train' name='federated.09glfav0znd6lm1676j6k13s3sow' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09glfav0znd6lm1676j6k13s3sow'>
+            <column datatype='real' name='[breed_category]' role='measure' type='quantitative' />
+            <column-instance column='[breed_category]' derivation='Count' name='[cnt:breed_category:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[issue_date]' derivation='Day' name='[dy:issue_date:ok]' pivot='key' type='ordinal' />
+            <column datatype='datetime' name='[issue_date]' role='dimension' type='ordinal' />
+            <column-instance column='[breed_category]' derivation='None' name='[none:breed_category:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[issue_date]' derivation='Year' name='[yr:issue_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:issue_date:ok]' member='2013' />
+              <groupfilter function='member' level='[yr:issue_date:ok]' member='2014' />
+              <groupfilter function='member' level='[yr:issue_date:ok]' member='2015' />
+              <groupfilter function='member' level='[yr:issue_date:ok]' member='2016' />
+              <groupfilter function='member' level='[yr:issue_date:ok]' member='2017' />
+              <groupfilter function='member' level='[yr:issue_date:ok]' member='2018' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</rows>
+        <cols>([federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok] / [federated.09glfav0znd6lm1676j6k13s3sow].[dy:issue_date:ok])</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Year of issue_date: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>541</value>
+                    <value>2.0</value>
+                    <value>2016</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Year of issue_date: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>2121</value>
+                    <value>1.0</value>
+                    <value>2016</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Year of issue_date: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>1806</value>
+                    <value>0.0</value>
+                    <value>2017</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{41AB6ADD-A3CC-4415-AC0E-7B87F1119D0E}' />
+    </worksheet>
+    <worksheet name='date wise (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='train' name='federated.09glfav0znd6lm1676j6k13s3sow' />
+          </datasources>
+          <datasource-dependencies datasource='federated.09glfav0znd6lm1676j6k13s3sow'>
+            <column caption='day_of_week' datatype='integer' name='[Calculation_1860268136510783488]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='ISOWEEKDAY([issue_date])' />
+            </column>
+            <column caption='is_weekday' datatype='boolean' name='[Calculation_264586494912614400]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[Calculation_1860268136510783488] &gt;=1 AND [Calculation_1860268136510783488] &lt;= 5' />
+            </column>
+            <column datatype='real' name='[breed_category]' role='measure' type='quantitative' />
+            <column-instance column='[breed_category]' derivation='Count' name='[cnt:breed_category:qk]' pivot='key' type='quantitative' />
+            <column datatype='datetime' name='[issue_date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_264586494912614400]' derivation='None' name='[none:Calculation_264586494912614400:nk]' pivot='key' type='nominal' />
+            <column-instance column='[breed_category]' derivation='None' name='[none:breed_category:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[issue_date]' derivation='Year' name='[yr:issue_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[yr:issue_date:ok]' member='2013' />
+              <groupfilter function='member' level='[yr:issue_date:ok]' member='2014' />
+              <groupfilter function='member' level='[yr:issue_date:ok]' member='2015' />
+              <groupfilter function='member' level='[yr:issue_date:ok]' member='2016' />
+              <groupfilter function='member' level='[yr:issue_date:ok]' member='2017' />
+              <groupfilter function='member' level='[yr:issue_date:ok]' member='2018' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <encodings>
+              <color column='[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.09glfav0znd6lm1676j6k13s3sow].[none:Calculation_264586494912614400:nk] * [federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk])</rows>
+        <cols>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Year of issue_date: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>541</value>
+                    <value>2.0</value>
+                    <value>2016</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Year of issue_date: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>2121</value>
+                    <value>1.0</value>
+                    <value>2016</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878'>breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Year of issue_date: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]&gt;</run>
+              <run>Æ&#10;</run>
+              <run fontcolor='#787878'>Count of breed_category: </run>
+              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>1806</value>
+                    <value>0.0</value>
+                    <value>2017</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='3' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878' fontsize='9'>Count of breed_category: </run>
+              <run bold='true' fontsize='9'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:Calculation_264586494912614400:nk]</field>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:Calculation_264586494912614400:nk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>647</value>
+                    <value>false</value>
+                    <value>1.0</value>
+                    <value>2016</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='4' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878' fontsize='9'>Count of breed_category: </run>
+              <run bold='true' fontsize='9'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:Calculation_264586494912614400:nk]</field>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:Calculation_264586494912614400:nk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>634</value>
+                    <value>false</value>
+                    <value>0.0</value>
+                    <value>2016</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='5' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878' fontsize='9'>Count of breed_category: </run>
+              <run bold='true' fontsize='9'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:Calculation_264586494912614400:nk]</field>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:Calculation_264586494912614400:nk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>1474</value>
+                    <value>true</value>
+                    <value>1.0</value>
+                    <value>2016</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+          <annotation class='point' id='6' mark-position='1' pullback='12' text-width='180'>
+            <formatted-text>
+              <run fontcolor='#787878' fontsize='9'>Count of breed_category: </run>
+              <run bold='true' fontsize='9'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='mark'>
+                <tuple-reference>
+                  <tuple-descriptor>
+                    <pane-descriptor>
+                      <x-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                      </x-fields>
+                      <y-fields>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:Calculation_264586494912614400:nk]</field>
+                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      </y-fields>
+                    </pane-descriptor>
+                    <columns>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:Calculation_264586494912614400:nk]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</field>
+                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+                    </columns>
+                  </tuple-descriptor>
+                  <tuple>
+                    <value>1537</value>
+                    <value>true</value>
+                    <value>0.0</value>
+                    <value>2016</value>
+                  </tuple>
+                </tuple-reference>
+              </visual-coordinate>
+            </point>
+            <body x='130' y='-20' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{6EEECB39-0C7C-461F-8EF1-C1491A02814F}' />
+    </worksheet>
     <worksheet name='ht wrt breed'>
       <layout-options>
         <title>
@@ -624,16 +1071,12 @@
             <datasource caption='train' name='federated.09glfav0znd6lm1676j6k13s3sow' />
           </datasources>
           <datasource-dependencies datasource='federated.09glfav0znd6lm1676j6k13s3sow'>
-            <column datatype='integer' name='[X1]' role='measure' type='quantitative' />
             <column datatype='integer' name='[X2]' role='measure' type='quantitative' />
-            <column-instance column='[X1]' derivation='Avg' name='[avg:X1:qk]' pivot='key' type='quantitative' />
             <column-instance column='[X2]' derivation='Avg' name='[avg:X2:qk]' pivot='key' type='quantitative' />
             <column-instance column='[height(cm)]' derivation='Avg' name='[avg:height(cm):qk]' pivot='key' type='quantitative' />
-            <column-instance column='[length(m)]' derivation='Avg' name='[avg:length(m):qk]' pivot='key' type='quantitative' />
-            <column datatype='integer' name='[breed_category]' role='measure' type='quantitative' />
+            <column datatype='real' name='[breed_category]' role='measure' type='quantitative' />
             <column-instance column='[breed_category]' derivation='Count' name='[cnt:breed_category:qk]' pivot='key' type='quantitative' />
             <column datatype='real' name='[height(cm)]' role='measure' type='quantitative' />
-            <column datatype='real' name='[length(m)]' role='measure' type='quantitative' />
             <column-instance column='[breed_category]' derivation='None' name='[none:breed_category:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <aggregation value='true' />
@@ -671,7 +1114,7 @@
               </tuple-descriptor>
               <tuple>
                 <value>1477</value>
-                <value>2</value>
+                <value>2.0</value>
               </tuple>
             </tuple-reference>
           </mark-label>
@@ -693,7 +1136,7 @@
               </tuple-descriptor>
               <tuple>
                 <value>8357</value>
-                <value>1</value>
+                <value>1.0</value>
               </tuple>
             </tuple-reference>
           </mark-label>
@@ -715,129 +1158,12 @@
               </tuple-descriptor>
               <tuple>
                 <value>9000</value>
-                <value>0</value>
+                <value>0.0</value>
               </tuple>
             </tuple-reference>
           </mark-label>
         </mark-labels>
         <annotations>
-          <annotation class='point' id='0' mark-position='1' pullback='12' text-width='180'>
-            <formatted-text>
-              <run fontcolor='#787878'>breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Avg. X1: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Count of breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
-            </formatted-text>
-            <point>
-              <visual-coordinate class='mark'>
-                <tuple-reference>
-                  <tuple-descriptor>
-                    <pane-descriptor>
-                      <x-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                      </x-fields>
-                      <y-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      </y-fields>
-                    </pane-descriptor>
-                    <columns>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                    </columns>
-                  </tuple-descriptor>
-                  <tuple>
-                    <value>13.144211238997968</value>
-                    <value>1477</value>
-                    <value>2</value>
-                  </tuple>
-                </tuple-reference>
-              </visual-coordinate>
-            </point>
-            <body x='130' y='-20' />
-          </annotation>
-          <annotation class='point' id='1' mark-position='1' pullback='12' text-width='180'>
-            <formatted-text>
-              <run fontcolor='#787878'>breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Avg. X1: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Count of breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
-            </formatted-text>
-            <point>
-              <visual-coordinate class='mark'>
-                <tuple-reference>
-                  <tuple-descriptor>
-                    <pane-descriptor>
-                      <x-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                      </x-fields>
-                      <y-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      </y-fields>
-                    </pane-descriptor>
-                    <columns>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                    </columns>
-                  </tuple-descriptor>
-                  <tuple>
-                    <value>4.8672968768696903</value>
-                    <value>8357</value>
-                    <value>1</value>
-                  </tuple>
-                </tuple-reference>
-              </visual-coordinate>
-            </point>
-            <body x='130' y='-20' />
-          </annotation>
-          <annotation class='point' id='2' mark-position='1' pullback='12' text-width='180'>
-            <formatted-text>
-              <run fontcolor='#787878'>breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Avg. X1: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Count of breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
-            </formatted-text>
-            <point>
-              <visual-coordinate class='mark'>
-                <tuple-reference>
-                  <tuple-descriptor>
-                    <pane-descriptor>
-                      <x-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                      </x-fields>
-                      <y-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      </y-fields>
-                    </pane-descriptor>
-                    <columns>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                    </columns>
-                  </tuple-descriptor>
-                  <tuple>
-                    <value>4.5601111111111114</value>
-                    <value>9000</value>
-                    <value>0</value>
-                  </tuple>
-                </tuple-reference>
-              </visual-coordinate>
-            </point>
-            <body x='130' y='-20' />
-          </annotation>
           <annotation class='point' id='3' mark-position='1' pullback='12' text-width='180'>
             <formatted-text>
               <run fontcolor='#787878'>breed_category: </run>
@@ -870,7 +1196,7 @@
                   <tuple>
                     <value>5.8612051455653349</value>
                     <value>1477</value>
-                    <value>2</value>
+                    <value>2.0</value>
                   </tuple>
                 </tuple-reference>
               </visual-coordinate>
@@ -909,7 +1235,7 @@
                   <tuple>
                     <value>4.3857843723824335</value>
                     <value>8357</value>
-                    <value>1</value>
+                    <value>1.0</value>
                   </tuple>
                 </tuple-reference>
               </visual-coordinate>
@@ -948,124 +1274,7 @@
                   <tuple>
                     <value>4.5444444444444443</value>
                     <value>9000</value>
-                    <value>0</value>
-                  </tuple>
-                </tuple-reference>
-              </visual-coordinate>
-            </point>
-            <body x='130' y='-20' />
-          </annotation>
-          <annotation class='point' id='6' mark-position='1' pullback='12' text-width='180'>
-            <formatted-text>
-              <run fontcolor='#787878'>breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Avg. length(m): </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Count of breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
-            </formatted-text>
-            <point>
-              <visual-coordinate class='mark'>
-                <tuple-reference>
-                  <tuple-descriptor>
-                    <pane-descriptor>
-                      <x-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                      </x-fields>
-                      <y-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      </y-fields>
-                    </pane-descriptor>
-                    <columns>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                    </columns>
-                  </tuple-descriptor>
-                  <tuple>
-                    <value>0.50662830060934283</value>
-                    <value>1477</value>
-                    <value>2</value>
-                  </tuple>
-                </tuple-reference>
-              </visual-coordinate>
-            </point>
-            <body x='130' y='-20' />
-          </annotation>
-          <annotation class='point' id='7' mark-position='1' pullback='12' text-width='180'>
-            <formatted-text>
-              <run fontcolor='#787878'>breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Avg. length(m): </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Count of breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
-            </formatted-text>
-            <point>
-              <visual-coordinate class='mark'>
-                <tuple-reference>
-                  <tuple-descriptor>
-                    <pane-descriptor>
-                      <x-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                      </x-fields>
-                      <y-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      </y-fields>
-                    </pane-descriptor>
-                    <columns>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                    </columns>
-                  </tuple-descriptor>
-                  <tuple>
-                    <value>0.5041869091779323</value>
-                    <value>8357</value>
-                    <value>1</value>
-                  </tuple>
-                </tuple-reference>
-              </visual-coordinate>
-            </point>
-            <body x='130' y='-20' />
-          </annotation>
-          <annotation class='point' id='8' mark-position='1' pullback='12' text-width='180'>
-            <formatted-text>
-              <run fontcolor='#787878'>breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Avg. length(m): </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]&gt;</run>
-              <run>Æ&#10;</run>
-              <run fontcolor='#787878'>Count of breed_category: </run>
-              <run bold='true'>&lt;[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]&gt;</run>
-            </formatted-text>
-            <point>
-              <visual-coordinate class='mark'>
-                <tuple-reference>
-                  <tuple-descriptor>
-                    <pane-descriptor>
-                      <x-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                      </x-fields>
-                      <y-fields>
-                        <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      </y-fields>
-                    </pane-descriptor>
-                    <columns>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:length(m):qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:breed_category:qk]</field>
-                      <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:qk]</field>
-                    </columns>
-                  </tuple-descriptor>
-                  <tuple>
-                    <value>0.50053999999999932</value>
-                    <value>9000</value>
-                    <value>0</value>
+                    <value>0.0</value>
                   </tuple>
                 </tuple-reference>
               </visual-coordinate>
@@ -1104,7 +1313,7 @@
                   <tuple>
                     <value>27.605423155044051</value>
                     <value>1477</value>
-                    <value>2</value>
+                    <value>2.0</value>
                   </tuple>
                 </tuple-reference>
               </visual-coordinate>
@@ -1143,7 +1352,7 @@
                   <tuple>
                     <value>27.608730405648014</value>
                     <value>8357</value>
-                    <value>1</value>
+                    <value>1.0</value>
                   </tuple>
                 </tuple-reference>
               </visual-coordinate>
@@ -1182,7 +1391,7 @@
                   <tuple>
                     <value>27.274659999999898</value>
                     <value>9000</value>
-                    <value>0</value>
+                    <value>0.0</value>
                   </tuple>
                 </tuple-reference>
               </visual-coordinate>
@@ -1233,6 +1442,39 @@
       </viewpoint>
       <simple-id uuid='{16564B3B-6597-40D4-901F-E60CCB65B3ED}' />
     </window>
+    <window class='worksheet' name='X1 wrt X2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[avg:X1:qk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[sum:X2:qk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[sum:height(cm):qk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[sum:length(m):qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{ECB52C7B-18AD-431C-8464-733BD77D9091}' />
+    </window>
     <window class='worksheet' name='ht wrt breed'>
       <cards>
         <edge name='left'>
@@ -1271,7 +1513,7 @@
       </viewpoint>
       <simple-id uuid='{FCA3B0E7-2553-430E-B5D4-B58B4BFC46C4}' />
     </window>
-    <window class='worksheet' maximized='true' name='condition wrt breed'>
+    <window class='worksheet' name='condition wrt breed'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1304,80 +1546,313 @@
       </viewpoint>
       <simple-id uuid='{5AC93D92-87A2-478A-8CEE-87BE7A1D3F0E}' />
     </window>
+    <window class='worksheet' name='breed_vs_pet'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.09glfav0znd6lm1676j6k13s3sow].[cnt:pet_category:ok]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{12DCAAB9-03D1-4487-9A3F-925FBEA801B7}' />
+    </window>
+    <window class='worksheet' name='date wise'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{76DAB1CF-2F3C-4F57-9534-AE9F65AE492D}' />
+    </window>
+    <window class='worksheet' maximized='true' name='date wise (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='fit-width' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:Calculation_264586494912614400:nk]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[none:breed_category:ok]</field>
+            <field>[federated.09glfav0znd6lm1676j6k13s3sow].[yr:issue_date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1C3E2447-340A-4C9E-B349-DAFC32176C08}' />
+    </window>
   </windows>
   <thumbnails>
+    <thumbnail height='192' name='X1 wrt X2' width='192'>
+      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
+      rH6xnPv/AbLNtQkFAQwEAAAAAElFTkSuQmCC
+    </thumbnail>
     <thumbnail height='192' name='X2 wrt breed' width='192'>
       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
-      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
-      t7vv/wHkz7fGMhho9AAAAABJRU5ErkJggg==
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='breed_vs_pet' width='192'>
+      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
+      SUVORK5CYII=
     </thumbnail>
     <thumbnail height='124' name='condition wrt breed' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAAB8CAYAAAA/1L8JAAAACXBIWXMAAA7DAAAOwwHHb6hk
@@ -1460,81 +1935,409 @@
       sliwYEG9X4+YPn0606dPv+djrK2h8W7fvr3OWHU6HbGxsXz99ddYW1sze/ZsAgICjGeA1NRU
       cnJypEjew+xuS4e2RFImVdRzt6VDW6K7Hev/A7j3p0Ba4952AAAAAElFTkSuQmCC
     </thumbnail>
+    <thumbnail height='192' name='date wise' width='192'>
+      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
+      YII=
+    </thumbnail>
+    <thumbnail height='192' name='date wise (2)' width='192'>
+      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
+    </thumbnail>
     <thumbnail height='192' name='ht wrt breed' width='192'>
       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
-      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
-      AElFTkSuQmCC
+      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
+      VfpbtvH/AeAmDwhM8truAAAAAElFTkSuQmCC
     </thumbnail>
   </thumbnails>
 </workbook>

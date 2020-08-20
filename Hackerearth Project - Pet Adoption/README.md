@@ -19,7 +19,10 @@ A leading pet adoption agency is planning to create a virtual tour experience fo
 1. Condition has missing values
     1. KNN imputation?
     2. Check if it is related to any cols
-2. Condition should ideally be categorical
-3. Date - month, year, weekday, weekend
-4. Encode color how?
-5. Diff of days bw issue and listing date
+2. Since X1 and X2 affect breed v=cat in similar manner is there corr bw them?
+3. Condition should ideally be categorical
+    1. When condition is NULL it is always breed = 2, so simply replace null with -1 and create feature condition_NULL
+4. Date - month, year, weekday, weekend
+    1. Listing date has time as well
+5. Encode color how?
+6. Diff of days bw issue and listing date
