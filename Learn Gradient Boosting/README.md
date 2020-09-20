@@ -113,4 +113,99 @@ We have to predict whether the patient has heart disease or not
     ![https://i.imgur.com/KgRWdKO.png](https://i.imgur.com/KgRWdKO.png)
 
 4. Similarly we work out the amount of say for the remaining stumps
-5.
+
+    Lets do this for Chest Pain
+
+    It made 3 errors
+
+    ![https://i.imgur.com/8KNvwH7.png](https://i.imgur.com/8KNvwH7.png)
+
+    Amount of say for chest pain = 0.42
+
+    Similarly we do this for the Blocked Arteries stump
+
+     
+
+    Now we know how the sample weights for the incorrectly classified samples are used to calculate the Amount of say each stump gets
+
+5. Now we need to know how to modify the wts st the next stump will take the errors the current stump made into account
+
+    Lets look at the first stump we made (using wt < 176). When we created this stump, all of the sample wts were same
+
+    This means that classifying all samples was equally important
+
+    But this stump incorrectly classified a sample:
+
+    ![https://i.imgur.com/WEQLMSs.png](https://i.imgur.com/WEQLMSs.png)
+
+    **So we will emphasize the need for the next stump to correctly classify it by increasing its sample wt and decreasing all the other sample wts**
+
+    Lets start by inc the sample wt for this incorrectly classified sample:
+
+    ![https://i.imgur.com/w9gLb5S.png](https://i.imgur.com/w9gLb5S.png)
+
+    Now when the amount of say is high, i.e the TE is less i.e the stump was good, the new sample wt will be raised and will be much larger than the prev one
+
+    ![https://i.imgur.com/NaOnkg7.png](https://i.imgur.com/NaOnkg7.png)
+
+    But if the amount of say is low, i.e the TE is high i.e the stump was not good, the new sample wt will be scaled by a relatively smaller number
+
+    That means that the new sample wt will only be a bit larger than the old one
+
+    An exception to this is if the amount of say is -ve, say -2
+
+    1/8 = 0.125 
+
+    0.125 x e^-2 =  0.09, which is lesser
+
+    In this example, amount of say = 0.97
+
+    e^0.97 = 2.64
+
+    new sample wt = 1/8 * 2.64 = **0.33**
+
+    This is more than the old one
+
+    Now we need to decrease the sample wts for all the correctly classified samples
+
+    ![https://i.imgur.com/9OqlNyQ.png](https://i.imgur.com/9OqlNyQ.png)
+
+    ![https://i.imgur.com/WKbtaxS.png](https://i.imgur.com/WKbtaxS.png)
+
+    Note the -ve sign before the amount of say
+
+    ![https://i.imgur.com/zM5sZXQ.png](https://i.imgur.com/zM5sZXQ.png)
+
+    As we see from the graph, when the amount of say is large, i.e the stump was good we scale by a value close to 0. This will make new sample wt v small
+
+    If amount of say is small, i.e the stump was not good we scale by a value close to 1. This will make new sample wt just a bit smaller
+
+    Here amount of say = 0.97
+
+    e^-0.97 = 0.38
+
+    new sample wt = 1/8 * 0.38 = **0.05**, **which is less than the old one** 
+
+    Note that if the amount of say was -ve say -2
+
+    1/8 x e^2 = 0.92 which is more, so we actually increase the wt.. Why is this?
+
+    Well since the stump was really bad, even on the cases where it actually predicted correctly, it probably did so by chance and not because it learned something useful,
+
+    So we do want these cases to be more important to be classified correctly by the future stumps, so we increase the weight (probably)
+
+     In this way we plug in the new sample wts
+
+    ![https://i.imgur.com/Cg092BJ.png](https://i.imgur.com/Cg092BJ.png)
+
+    The correct cases get lower wts while the incorrect one gets higher wt
+
+6. Normalize the new wts so that they add upto 1
+
+    Right now sum is 0.68
+
+    So we divide each wt by 0.68 to get the normalized values
+
+    ![https://i.imgur.com/ibEzR2w.png](https://i.imgur.com/ibEzR2w.png)
+
+    Now we just use these normalized wts as the sample wts columns, since these are the ons we will use for the next stump
