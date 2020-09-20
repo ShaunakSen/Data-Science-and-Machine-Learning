@@ -209,3 +209,49 @@ We have to predict whether the patient has heart disease or not
     ![https://i.imgur.com/ibEzR2w.png](https://i.imgur.com/ibEzR2w.png)
 
     Now we just use these normalized wts as the sample wts columns, since these are the ons we will use for the next stump
+
+7. Now we use the modified sample wts to make the second stump in the forest. Recall, when we made the first stump using weight, we did not have to worry about this as all the wts were same and we simply chose the least value of Gini Index.
+
+    Here we take the sample wts and calculate the **Weighted Gini Index** to determine which variable should be the next stump
+
+    The WGI would put more emphasis on classifying the sample with the highest wt (the one that was mis-classified by the last stump) 
+
+    Alternatively, instead of using WGI we can make a **new** collection of samples that contain duplicate copies of samples with the largest sample wts
+
+    1. We start by making a new and empty dataset that is the same size as the original one
+    2. Remember that the sum of sample wts always equals 1
+    3. So we pick a number randomly (say x) bw 0 and 1
+    4. We check where that number falls when we use sample wts as a distribution
+        1. For eg: if 0≤x≤0.07, we put the first sample into the new collection of samples
+        2. If 0.07≤x≤0.07+0.07(0.14) we put the second sample into the new collection of samples
+        3. If 0.14≤x≤0.14+0.07(0.21) we put the third sample into the new collection of samples
+        4. If 0.21≤x≤0.21+0.49(0.70) we put the fourth sample into the new collection of samples
+        5. .... and so on ...
+    5. Note how the interval is equal to the sample wt and if the sample wt is large so is the interval and so is the probability that the random number picked is in that interval and that sample will be selected
+    6. For eg if x = 0.72 we pick the fifth sample and put it in the new collection:
+
+        ![https://i.imgur.com/fys0VL0.png](https://i.imgur.com/fys0VL0.png)
+
+    7. Then we pick another random no x = 0.42 so we pick the fourth sample and put it in the new collection
+    8. Then we pick 0.83 and we put the sixth one
+    9. Then 0.51, again we pick fourth one 
+    10. We continue to do this until size of new collection == size of original
+
+        ![https://i.imgur.com/MUeUH3M.png](https://i.imgur.com/MUeUH3M.png)
+
+    11. Now we get rid of the original samples and use this new collection of samples
+8. We assign equal wts to these samples, just as before. But this does not mean that the next stump will not emphasize the need to correctly classify the previously miss-classified sample. This sample will be treated as a block, creating a large penalty for being miss-classified
+
+    Basically this block has same values of features and same target, so the effective wt becomes 1*4/8 = 1/2 
+
+    ![https://i.imgur.com/k7QvtwD.png](https://i.imgur.com/k7QvtwD.png)
+
+9. Now we go back to the beginning and try to find the stump that does the best job classifying the new collection of samples
+10. This is how the errors that the first tree (stump) makes influences how the second is made. How the errors the 2nd one makes influences how the 3rd is made and so on...
+11. How does a forest of stumps created by AdaBoost makes classifications
+    1. Say that the stumps on the LHS of the below diag predicted heart disease and the ones on the RHS predicted not
+    2. Since the sum of amounts of say for the 1st class is higher we predict that patient has heart disease
+
+        ![https://i.imgur.com/E0B49LJ.png](https://i.imgur.com/E0B49LJ.png)
+
+---
